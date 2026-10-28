@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Elemental Pro · XEN1 website · EP-WEB-v3.9 · 2026-10-28 · primary domain xen1.us -->
+<!-- Elemental Pro · XEN1 website · EP-WEB-v4.0 · 2026-10-28 · primary domain xen1.us · guild section -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -32,25 +32,25 @@ a{color:inherit}
 header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,16,21,.96);border-bottom:1px solid rgba(38,43,54,.6)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
 .brand{display:flex;align-items:center;gap:4px;text-decoration:none}
-.brand span{margin-left:10px}
+.brand span{margin-left:10px;white-space:nowrap}
 .brand svg{width:34px;height:34px}
 .brand b{font-family:var(--serif);font-weight:400;font-size:32px;letter-spacing:.02em}
 .brand sup{font-family:var(--mono);font-size:19px;color:var(--x)}
 .brand span{font-size:18px;color:var(--quiet);letter-spacing:.14em;text-transform:uppercase}
-nav ul{display:flex;gap:28px;list-style:none}
+nav ul{display:flex;gap:24px;list-style:none;white-space:nowrap}
 nav a{font-family:var(--mono);font-size:19px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--quiet);transition:color .2s}
 nav a:hover,nav a.on{color:var(--bone)}
 .cta{display:inline-block;background:var(--bone);color:var(--ground);text-decoration:none;font-weight:600;font-size:19px;padding:14px 24px;min-height:48px;border:0;cursor:pointer;font-family:var(--sans);border-radius:999px;transition:transform .15s,background .15s}
 .cta:hover{transform:translateY(-1px);background:#F4F1EB}
 .cta.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
 .bar .cta{padding:12px 20px;font-size:19px;min-height:48px}
-@media(max-width:1060px){nav{display:none}}
+@media(max-width:1359px){nav{display:none}}
 .mnav{position:relative}
 .mnav summary{list-style:none;cursor:pointer;min-height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;font-size:19px;padding:0 16px;color:var(--bone)}
 .mnav summary::-webkit-details-marker{display:none}
 .mnav ul{position:absolute;right:0;top:56px;list-style:none;background:var(--ground-2);border:1px solid var(--line);border-radius:4px;padding:8px;min-width:220px}
 .mnav a{display:block;padding:12px 14px;font-size:20px;text-decoration:none}
-@media(min-width:1061px){.mnav{display:none}}
+@media(min-width:1360px){.mnav{display:none}}
 .bar-right{display:flex;align-items:center;gap:10px}
 .hcta{white-space:nowrap}.hcta .short{display:none}
 @media(max-width:520px){.bar .cta{padding:10px 14px;font-size:18px}.mnav summary{padding:0 12px}.bar-right{gap:8px}.wrap.bar{gap:10px}.hcta .long{display:none}.hcta .short{display:inline}.brand b{font-size:26px}.brand svg{width:28px;height:28px}}
@@ -154,8 +154,12 @@ nav a:hover,nav a.on{color:var(--bone)}
 @media(min-width:760px){.intake{padding:32px}}
 .intake h3{font-family:var(--serif);font-weight:400;font-size:28px}
 .intake label{display:flex;flex-direction:column;gap:6px;font-size:19px;color:var(--muted)}
-.intake input,.intake textarea{font:inherit;font-size:19px;color:var(--bone);background:var(--ground);border:1px solid var(--line);border-radius:4px;padding:12px 14px;min-height:48px}
+.intake input,.intake textarea,.intake select{font:inherit;font-size:19px;color:var(--bone);background:var(--ground);border:1px solid var(--line);border-radius:4px;padding:12px 14px;min-height:48px}
 .intake textarea{min-height:120px;resize:vertical}
+.intake select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--quiet) 50%),linear-gradient(135deg,var(--quiet) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.guild-lede{margin:0 0 40px 144px;max-width:640px;font-size:clamp(19px,1.8vw,22px);color:var(--muted)}
+.guild-grid{margin:40px 0 0 144px;max-width:720px}
+@media(max-width:860px){.guild-lede,.guild-grid{margin-left:0}}
 .intake input:focus,.intake textarea:focus{outline:2px solid var(--bone);outline-offset:1px}
 .intake .row{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:560px){.intake .row{grid-template-columns:1fr 1fr}}
@@ -201,12 +205,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li><a href="#n1">n=1</a></li>
         <li><a href="#xen1">XEN1</a></li>
         <li><a href="#pro">Pro</a></li>
+        <li><a href="#guild">Guild</a></li>
       </ul>
     </nav>
     <div class="bar-right">
       <details class="mnav"><summary aria-label="Chapters">Menu</summary>
         <ul>
-          <li><a href="#hourware">Hourware</a></li><li><a href="#flip">The flip</a></li><li><a href="#ops">Ops</a></li><li><a href="#n1">n=1</a></li><li><a href="#xen1">XEN1</a></li><li><a href="#pro">Pro</a></li><li><a href="#book">Contact</a></li>
+          <li><a href="#hourware">Hourware</a></li><li><a href="#flip">The flip</a></li><li><a href="#ops">Ops</a></li><li><a href="#n1">n=1</a></li><li><a href="#xen1">XEN1</a></li><li><a href="#pro">Pro</a></li><li><a href="#guild">Guild</a></li><li><a href="#book">Contact</a></li>
         </ul>
       </details>
       <a class="cta hcta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener"><span class="long">Book time to chat</span><span class="short">Book a chat</span></a>
@@ -224,6 +229,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <a href="#swear" data-for="swear" tabindex="-1"></a>
   <a href="#pro" data-for="pro" tabindex="-1"></a>
   <a href="#engage" data-for="engage" tabindex="-1"></a>
+  <a href="#guild" data-for="guild" tabindex="-1"></a>
 </div>
 
 <main>
@@ -417,6 +423,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
+<section class="chapter" id="guild">
+  <div class="wrap">
+    <div class="ch-head rv"><span class="ch-num">The guild</span><h2>Ran the room?<br>Run three.<br><em class="serif n1em">Join the guild.</em></h2></div>
+    <p class="lede rv guild-lede">COO. CMO. Done the corner office, done the org chart, done billing hours. The guild is where seat-holders go fractional. XEN1 is the operating system and the machines. You bring the judgment.</p>
+    <div class="swear rv">
+      <div><h3>One seat. Many tables.</h3><p>Fractional, not part-time. Lead several companies at once. No hour-grind.</p></div>
+      <div><h3>Machines carry the base.</h3><p>The stack does the heavy. You stay at the peak: taste, calls, sign-off.</p></div>
+      <div><h3>Plug in. Don't rebuild.</h3><p>Strategy, execution, n=1 content. One system, already wired.</p></div>
+      <div><h3>Guild, not agency.</h3><p>Peers, not headcount. Senior minds only.</p></div>
+    </div>
+    <div class="guild-grid">
+      <form class="intake rv" id="guild-form" action="https://formsubmit.co/Pro@precisionequinehealth.com" method="POST">
+        <h3>Raise your hand.</h3>
+        <div class="row">
+          <label for="g-name">Name<input id="g-name" type="text" name="name" autocomplete="name" required></label>
+          <label for="g-email">Email<input id="g-email" type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <div class="row">
+          <label for="g-seat">Your seat<select id="g-seat" name="seat" required><option value="" disabled selected>Choose</option><option>COO</option><option>CMO</option><option>Both</option></select></label>
+          <label for="g-link">LinkedIn<input id="g-link" type="url" name="linkedin" placeholder="https://" autocomplete="url"></label>
+        </div>
+        <label for="g-bring">What would you bring?<textarea id="g-bring" name="bring" required></textarea></label>
+        <input type="hidden" name="_subject" value="XEN1 guild: new hand raised">
+        <input type="hidden" name="_cc" value="hello@xen1.us">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://xen1.us/?guild=1#guild">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="cta" type="submit">Join the guild</button>
+        <p class="note" id="guild-note" hidden>Hand seen. Pro will be in touch.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section class="close" id="book">
   <div class="terrain"><img src="terrain.svg" alt=""></div>
   <div class="wrap close-grid">
@@ -456,7 +496,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Elemental Pro LLC · XEN1 · New York · Florida</span>
-    <span>EP-WEB-v3.9</span>
+    <span>EP-WEB-v4.0</span>
   </div>
 </footer>
 
@@ -465,6 +505,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.getElementById('yr').textContent = new Date().getFullYear();
 if (location.search.indexOf('sent=1') > -1) { var n = document.getElementById('sent-note'); if (n) n.hidden = false; }
+if (location.search.indexOf('guild=1') > -1) { var g = document.getElementById('guild-note'); if (g) g.hidden = false; }
 (function(){
   var rv = document.querySelectorAll('.rv');
   if (!('IntersectionObserver' in window)) { rv.forEach(function(el){ el.classList.add('in'); }); return; }
