@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Elemental Pro · XEN1 website · EP-WEB-v3.4 · 2026-10-28 -->
+<!-- Elemental Pro · XEN1 website · EP-WEB-v3.5 · 2026-10-28 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -14,13 +14,13 @@
 <style>
 :root{
   --ground:#0E1015; --ground-2:#13161D; --line:#262B36; --bone:#E6E1D8; --muted:#B4B9C3; --quiet:#8C93A3;
-  --x:#E6E1D8; --e:#E6E1D8; --n:#E6E1D8;
+  --x:#E6E1D8; --e:#E6E1D8; --n:#E6E1D8; --ember:#C2561F;
   --serif:'Bodoni Moda', 'Bodoni 72', Didot, 'Times New Roman', serif; --sans:'Sofia Sans Condensed', 'Arial Narrow', Arial, sans-serif; --mono:'Sofia Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   --wrap:1160px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{background:var(--ground);color:var(--bone);font-family:var(--sans);font-stretch:87.5%;font-size:18px;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{background:var(--ground) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .88 0 0 0 0 .85 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--bone);font-family:var(--sans);font-stretch:87.5%;font-size:18px;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
@@ -55,7 +55,7 @@ nav a:hover,nav a.on{color:var(--bone)}
 @media(max-width:520px){.bar .cta{padding:10px 14px;font-size:16px}.hcta .long{display:none}.hcta .short{display:inline}.brand b{font-size:26px}.brand svg{width:28px;height:28px}}
 @media(max-width:520px){.brand span{display:none}}
 
-.hero{position:relative;overflow:hidden;display:flex;align-items:center;padding:104px 0 120px}
+.hero{background:radial-gradient(120% 80% at 70% 0%,rgba(194,86,31,.10),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='9'/%3E%3CfeDiffuseLighting lighting-color='%23C9C4BB' surfaceScale='4'%3E%3CfeDistantLight azimuth='225' elevation='38'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix values='0 0 0 0 .8 0 0 0 0 .78 0 0 0 0 .74 .5 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='900' height='900' filter='url(%23c)'/%3E%3C/svg%3E") center/900px 900px;position:relative;overflow:hidden;display:flex;align-items:center;padding:104px 0 120px}
 @media(min-width:900px){.hero{min-height:100svh;padding:120px 0 200px}}
 .hero .terrain{position:absolute;left:0;right:0;bottom:0;height:40%;min-height:180px;opacity:.85;pointer-events:none}
 .terrain img{width:100%;height:100%;object-fit:cover;object-position:bottom}
@@ -64,11 +64,11 @@ nav a:hover,nav a.on{color:var(--bone)}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,88px);line-height:1;letter-spacing:-.02em}
 .hero h1 em{color:var(--muted)}
 .hero p.lede{font-size:clamp(19px,1.8vw,22px);color:var(--muted);max-width:560px}
-.hero .logo-anim{grid-area:logo;width:100%;max-width:220px;border-radius:4px}
+.hero .logo-anim{grid-area:logo;width:100%;max-width:170px;height:auto;aspect-ratio:1/1;margin:-8px 0 -12px -14px}
 @media(min-width:860px){
   .hero-grid{grid-template-columns:1.2fr 1fr;column-gap:48px;grid-template-areas:"label ." "title logo" "lede ." "ctas .";row-gap:24px}
   .h-title,.hero .logo-anim{align-self:center}
-  .hero .logo-anim{max-width:440px;justify-self:end}
+  .hero .logo-anim{max-width:440px;justify-self:end;margin:0}
 }
 
 .ages{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ground-2)}
@@ -82,7 +82,7 @@ nav a:hover,nav a.on{color:var(--bone)}
 .ages li.now .verb{color:var(--bone)}
 @media(max-width:820px){.ages ol{grid-template-columns:1fr 1fr}.ages li{border-left:none;border-top:1px solid var(--line)}}
 
-.chapter{padding:80px 0;border-bottom:1px solid var(--line);position:relative}
+.chapter{background:radial-gradient(80% 60% at 100% 0%,rgba(255,255,255,.025),transparent 60%);padding:80px 0;border-bottom:1px solid var(--line);position:relative}
 .ch-head{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:56px}
 .ch-num{font-family:var(--mono);font-size:15px;color:var(--quiet);padding-top:18px}
 .ch-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5.5vw,72px);line-height:1.02;letter-spacing:-.02em}
@@ -140,7 +140,7 @@ nav a:hover,nav a.on{color:var(--bone)}
 .phase p{color:var(--muted);font-size:17px}
 @media(max-width:900px){.phases{grid-template-columns:1fr;margin-left:0}}
 
-.close{padding:88px 0 96px;position:relative;overflow:hidden}
+.close{background:radial-gradient(90% 70% at 20% 100%,rgba(194,86,31,.12),transparent 65%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='9'/%3E%3CfeDiffuseLighting lighting-color='%23C9C4BB' surfaceScale='4'%3E%3CfeDistantLight azimuth='225' elevation='38'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix values='0 0 0 0 .8 0 0 0 0 .78 0 0 0 0 .74 .5 0 0 0 -.38'/%3E%3C/filter%3E%3Crect width='900' height='900' filter='url(%23c)'/%3E%3C/svg%3E") center/900px 900px;padding:88px 0 96px;position:relative;overflow:hidden}
 .close .terrain{position:absolute;left:0;right:0;bottom:0;height:60%;opacity:.5;pointer-events:none;transform:scaleX(-1)}
 .close h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.02em;position:relative}
 .close p{position:relative;margin-top:20px;font-size:19px;color:var(--muted);max-width:620px}
@@ -161,6 +161,18 @@ nav a:hover,nav a.on{color:var(--bone)}
 .intake .note{font-size:15px;color:var(--quiet)}
 .hp{position:absolute;left:-9999px}
 
+.tick{display:block;width:28px;height:2px;background:var(--ember)}
+.mono,.ch-num,.el .k,.phase .k{color:var(--ember)}
+.hero h1 em,.n1em{color:var(--ember)}
+.body p.punch{color:var(--bone)}
+.body p.punch::before{content:"";display:block;width:40px;height:2px;background:var(--ember);margin-bottom:18px}
+nav a.on,nav a:hover{color:var(--ember)}
+.rail a.on{background:var(--ember)}
+.cta:hover{background:#F4F1EB}
+.cta.ghost:hover{border-color:var(--ember)}
+.ages li.now .age{color:var(--ember)}
+.intake input:focus,.intake textarea:focus{outline-color:var(--ember)}
+.brand sup{color:var(--ember)}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:15px;color:var(--quiet)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
@@ -242,16 +254,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="hourware">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">01 / Hourware</span><h2>Hourware is dead.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">Hourware</span><h2>Hourware is dead.</h2></div>
     <div class="body rv">
       <p>And the agency? Still billing like it's 1987. A pyramid of hours. A few minds on top, a sprawl of juniors underneath, the client paying for the sprawl.</p>
       <p class="punch">Done. The bottom of the pyramid just went liquid.</p>
       <p>Three truths. No hedging.</p>
     </div>
     <div class="truths">
-      <div class="truth rv"><span class="k">i.</span><h3>The top wins.</h3><p>Judgment is the scarce thing now. Everything under it runs on intelligence. One senior mind, AI-amplified, does what a floor of people used to.</p></div>
-      <div class="truth rv"><span class="k">ii.</span><h3>Ops for everyone.</h3><p>What only the big guys could staff, every business can now run. Democratized. Yours.</p></div>
-      <div class="truth rv"><span class="k">iii.</span><h3>n=1.</h3><p>Content got cheap. Attention didn't. So stop talking to the average. The average doesn't buy.</p></div>
+      <div class="truth rv"><span class="tick" aria-hidden="true"></span><h3>The top wins.</h3><p>Judgment is the scarce thing now. Everything under it runs on intelligence. One senior mind, AI-amplified, does what a floor of people used to.</p></div>
+      <div class="truth rv"><span class="tick" aria-hidden="true"></span><h3>Ops for everyone.</h3><p>What only the big guys could staff, every business can now run. Democratized. Yours.</p></div>
+      <div class="truth rv"><span class="tick" aria-hidden="true"></span><h3>n=1.</h3><p>Content got cheap. Attention didn't. So stop talking to the average. The average doesn't buy.</p></div>
     </div>
     <div class="body rv"><p class="punch">This is the unagency.</p></div>
   </div>
@@ -259,7 +271,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="flip">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">02 / The flip</span><h2>Keep the peak.<br>Liquefy the base.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">The flip</span><h2>Keep the peak.<br>Liquefy the base.</h2></div>
     <div class="body rv">
       <p>The old deal: you paid for layers. Managers managing managers. Juniors learning on your dime. Strategy diluted at every handoff until it arrived as a deck nobody executed.</p>
       <p><strong>The new deal: the senior mind stays. The layers go. AI does the lifting.</strong> You buy judgment and outcomes. Not hours. Never hours again.</p>
@@ -306,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="ops">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">03 / Ops, unlocked</span><h2>Moat drained.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">Ops, unlocked</span><h2>Moat drained.</h2></div>
     <div class="body rv">
       <p>Operations used to be a moat. Only the big could afford the people to build it.</p>
       <p>Process. Automation. Reporting. Service. Scheduling. Once a department. Now a system, built around how your business actually breathes. Custom. Not bolted on. Not borrowed.</p>
@@ -318,7 +330,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="n1">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">04 / n=1</span><h2>Mass media.<br>Mass message.<br><em class="serif" style="color:var(--n)">Mass meh.</em></h2></div>
+    <div class="ch-head rv"><span class="ch-num">n=1</span><h2>Mass media.<br>Mass message.<br><em class="serif n1em">Mass meh.</em></h2></div>
     <div class="body rv">
       <p>Marketing was built for the average because making more was expensive. That math broke.</p>
       <p>Making is easy now. An ad, a newsletter, a video, a post, a print piece, a page: shaped for the one segment, the one person, it's meant to move. Not the crowd. The one.</p>
@@ -329,10 +341,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="xen1">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">05 / XEN1</span><h2>Three elements.<br>One compound.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">XEN1</span><h2>Three elements.<br>One compound.</h2></div>
     <div class="elements">
       <article class="el x rv">
-        <div class="top"><span class="k">01 · STRATEGY</span>
+        <div class="top"><span class="k">STRATEGY</span>
           <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><line x1="8" y1="8" x2="48" y2="48" stroke="#B4B9C3" stroke-width="1.5"/><line x1="48" y1="8" x2="8" y2="48" stroke="#B4B9C3" stroke-width="1.5"/><circle cx="28" cy="28" r="5" fill="#B4B9C3"/></svg></div>
         <p class="sym">X<sup>1</sup></p>
         <h3>Strategy</h3>
@@ -340,7 +352,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <ul><li>Brand architecture</li><li>Competitive differentiation</li><li>Customer segmentation</li><li>Insights and analytics framework</li><li>Team modeling and training</li><li>Coaching and mentoring</li><li>The rest of the CMO chair</li></ul>
       </article>
       <article class="el e rv">
-        <div class="top"><span class="k">02 · EXECUTION</span>
+        <div class="top"><span class="k">EXECUTION</span>
           <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><line x1="8" y1="14" x2="48" y2="14" stroke="#B4B9C3" stroke-width="1.5"/><line x1="8" y1="28" x2="48" y2="28" stroke="#B4B9C3" stroke-width="1.5"/><line x1="8" y1="42" x2="48" y2="42" stroke="#B4B9C3" stroke-width="1.5"/><line x1="8" y1="14" x2="8" y2="42" stroke="#B4B9C3" stroke-width="1.5"/></svg></div>
         <p class="sym">E<sup>1</sup></p>
         <h3>Execution</h3>
@@ -348,7 +360,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <ul><li>Business process reengineering</li><li>A custom operating system, built around how you run</li></ul>
       </article>
       <article class="el n rv">
-        <div class="top"><span class="k">03 · PERSONALIZATION</span>
+        <div class="top"><span class="k">PERSONALIZATION</span>
           <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="20" fill="none" stroke="#B4B9C3" stroke-width="1.5"/><circle cx="42" cy="14" r="5" fill="#B4B9C3"/></svg></div>
         <p class="sym">N<sup>1</sup></p>
         <h3>Personalization</h3>
@@ -362,7 +374,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="swear">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">06 / What we swear by</span><h2>Four oaths.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">What we swear by</span><h2>Four oaths.</h2></div>
     <div class="swear rv">
       <div><h3>One strategy.</h3><p>Yours. Not a template with your logo on it.</p></div>
       <div><h3>Humans judge. Machines lift.</h3><p>A senior mind sets the direction and signs off every output. AI does the heavy.</p></div>
@@ -376,7 +388,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap pro">
     <img class="rv" src="pro-bose.jpg" alt="Pro Bose" width="340" height="340">
     <div class="rv">
-      <p class="mono">07 / Built by</p>
+      <p class="mono">Built by</p>
       <h3>Pro Bose</h3>
       <p>Twenty years in the old model. Strategy lead at New York creative agencies, fifteen of those years launching pharmaceutical products and medical devices. VP of Marketing at Novartis.</p>
       <p>Saw the pyramid from the top. Watched the base go liquid. Built Precision Equine Health on the new model.</p>
@@ -396,7 +408,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="chapter" id="engage">
   <div class="wrap">
-    <div class="ch-head rv"><span class="ch-num">08 / Engage</span><h2>Diagnose. Build. Run.</h2></div>
+    <div class="ch-head rv"><span class="ch-num">Engage</span><h2>Diagnose. Build. Run.</h2></div>
     <div class="phases">
       <div class="phase rv"><span class="k">Weeks 1–4</span><h3>Diagnose</h3><p>Brand, funnel and operations, taken apart. One strategy, one plan.</p></div>
       <div class="phase rv"><span class="k">Months 2–3</span><h3>Build</h3><p>Positioning locked. Operating system live. Content engine on.</p></div>
@@ -444,7 +456,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Elemental Pro LLC · XEN1 · New York · Florida</span>
-    <span>EP-WEB-v3.4</span>
+    <span>EP-WEB-v3.5</span>
   </div>
 </footer>
 
