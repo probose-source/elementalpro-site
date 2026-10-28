@@ -152,7 +152,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </a>
     <nav aria-label="Chapters">
       <ul>
-        <li><a href="#manifesto">Hourware</a></li>
+        <li><a href="#hourware">Hourware</a></li>
         <li><a href="#flip">The flip</a></li>
         <li><a href="#ops">Ops</a></li>
         <li><a href="#n1">n=1</a></li>
@@ -166,7 +166,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div class="rail" aria-hidden="true">
   <a href="#top" data-for="top" tabindex="-1"></a>
-  <a href="#manifesto" data-for="manifesto" tabindex="-1"></a>
+  <a href="#hourware" data-for="hourware" tabindex="-1"></a>
   <a href="#flip" data-for="flip" tabindex="-1"></a>
   <a href="#ops" data-for="ops" tabindex="-1"></a>
   <a href="#n1" data-for="n1" tabindex="-1"></a>
@@ -186,7 +186,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h1 style="margin-top:22px">Ice melts.<br>Bronze yields.<br><em>Agencies?</em></h1>
       <p class="lede">Every age ends the same way: quietly, then all at once. This one's ending now.</p>
       <div class="ctas">
-        <a class="cta" href="#manifesto">Enter</a>
+        <a class="cta" href="#hourware">Enter</a>
         <a class="cta ghost" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min</a>
       </div>
     </div>
@@ -204,7 +204,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </ol>
 </div>
 
-<section class="chapter" id="manifesto">
+<section class="chapter" id="hourware">
   <div class="wrap">
     <div class="ch-head rv"><span class="ch-num">01 / Hourware</span><h2>Hourware is dead.</h2></div>
     <div class="body rv">
@@ -383,7 +383,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   if (!('IntersectionObserver' in window)) { rv.forEach(function(el){ el.classList.add('in'); }); return; }
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: .12});
   rv.forEach(function(el){ io.observe(el); });
-  var ids = ['top','manifesto','flip','ops','n1','xen1','swear','pro','engage'];
+  var ids = ['top','hourware','flip','ops','n1','xen1','swear','pro','engage'];
   var spy = new IntersectionObserver(function(es){
     es.forEach(function(e){
       if (!e.isIntersecting) return;
