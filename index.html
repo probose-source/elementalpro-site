@@ -1,350 +1,366 @@
 <!doctype html>
-<!-- Elemental Pro website · EP-WEB-v1.3 · 2026-10-28 -->
+<!-- Elemental Pro · XEN1 website · EP-WEB-v2.0 · 2026-10-28 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elemental Pro | Fractional COO and CMO Network</title>
-<meta name="description" content="Elemental Pro brings strategy leadership, marketing, content and AI-enabled operations into one engagement, delivered by a network of fractional COOs and CMOs.">
+<title>XEN1 by Elemental Pro | The age of intelligence</title>
+<meta name="description" content="XEN1 by Elemental Pro: singular strategy, integrated execution, content for an audience of one. Built for the age of intelligence.">
+<link rel="icon" href="xen1-logo-static.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#14213D; --navy-2:#1D2D50; --cream:#F6F4EF; --sand:#E9E4D8; --paper:#FFFDF8;
-  --rust:#B4472F; --rust-soft:#E3A48F; --ink:#14213D; --muted:#4A5568; --muted-dark:#C9D1DE; --line:#DDD7CA;
-  --serif:'Libre Baskerville', Georgia, serif; --sans:'Public Sans', Arial, sans-serif;
-  --wrap:1180px;
+  --ground:#0E1015; --ground-2:#13161D; --line:#262B36; --bone:#E6E1D8; --muted:#B4B9C3; --quiet:#8C93A3;
+  --x:#A39BD0; --e:#8EA2AE; --n:#C7A15A;
+  --serif:'Instrument Serif', Georgia, serif; --sans:'Inter Tight', Arial, sans-serif; --mono:'JetBrains Mono', ui-monospace, monospace;
+  --wrap:1160px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ground);color:var(--bone);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rust)}
-h1,h2,h3{font-weight:400}
-h1{font-family:var(--serif);font-size:clamp(40px,6vw,72px);line-height:1.1;letter-spacing:-.01em}
-h2{font-family:var(--serif);font-size:clamp(30px,4vw,46px);line-height:1.15;margin:14px 0 20px}
-h3{font-size:20px;font-weight:700;line-height:1.3}
-.lede{font-size:20px;color:var(--muted);max-width:720px}
-section{padding:96px 0}
-.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s ease,background .15s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--rust);color:#FBF3EE}
-.btn-primary:hover{background:#9C3B26}
-.btn-ghost{border:1.5px solid currentColor}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--quiet)}
+.serif{font-family:var(--serif);font-weight:400}
 
-/* nav */
-header{position:sticky;top:0;z-index:20;background:rgba(20,33,61,.96);backdrop-filter:blur(6px);color:var(--cream)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-family:var(--serif);font-size:21px;text-decoration:none;letter-spacing:.01em}
-.logo span{color:var(--rust-soft)}
-.nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
-.nav ul a{text-decoration:none;opacity:.85}
-.nav ul a:hover{opacity:1}
-.nav .btn{padding:10px 20px;font-size:14px}
-@media(max-width:820px){.nav ul{display:none}}
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,16,21,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(38,43,54,.6)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:.02em}
+.brand sup{font-family:var(--mono);font-size:11px;color:var(--x)}
+.brand span{font-size:12px;color:var(--quiet);letter-spacing:.14em;text-transform:uppercase}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--quiet);transition:color .2s}
+nav a:hover,nav a.on{color:var(--bone)}
+.cta{display:inline-block;background:var(--bone);color:var(--ground);text-decoration:none;font-weight:600;font-size:15px;padding:12px 22px;border-radius:999px;transition:transform .15s,background .15s}
+.cta:hover{transform:translateY(-1px);background:#F4F1EB}
+.cta.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.bar .cta{padding:9px 18px;font-size:14px}
+@media(max-width:980px){nav{display:none}}
+@media(max-width:520px){.brand span{display:none}}
 
-/* hero */
-.hero{background:var(--navy);color:var(--cream);padding:110px 0 120px}
-.hero .eyebrow{color:var(--rust-soft)}
-.hero h1{margin:20px 0 28px;max-width:960px}
-.hero p{font-size:21px;color:var(--muted-dark);max-width:700px}
-.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
-.hero .btn-ghost{color:var(--cream)}
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;padding:120px 0 220px}
+.hero .terrain{position:absolute;left:0;right:0;bottom:0;height:46vh;min-height:300px;opacity:.85;pointer-events:none}
+.terrain img{width:100%;height:100%;object-fit:cover;object-position:bottom}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,8.5vw,120px);line-height:.95;letter-spacing:-.02em}
+.hero h1 em{color:var(--muted)}
+.hero p.lede{margin-top:28px;font-size:clamp(19px,2vw,23px);color:var(--muted);max-width:560px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.hero .logo-anim{width:100%;max-width:420px;justify-self:end;border-radius:4px}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .logo-anim{justify-self:start;max-width:240px}}
 
-/* problem */
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-@media(max-width:960px){.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}}
-@media(max-width:560px){.grid4{grid-template-columns:1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px}
-.card p{color:var(--muted);margin-top:8px;font-size:17px}
-.card .num{font-size:13px;font-weight:700;color:var(--rust);letter-spacing:.1em;margin-bottom:10px}
-.cap{border-top:5px solid var(--navy);border-radius:8px}
-.pullquote{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.35;margin-top:44px;max-width:860px}
+.ages{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ground-2)}
+.ages ol{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.ages li{padding:28px 20px;border-left:1px solid var(--line)}
+.ages li:first-child{border-left:none}
+.ages .age{font-family:var(--serif);font-size:30px;line-height:1.1}
+.ages .verb{margin-top:6px;font-size:15px;color:var(--quiet)}
+.ages li.now{background:#181B24}
+.ages li.now .age{color:var(--x)}
+.ages li.now .verb{color:var(--bone)}
+@media(max-width:820px){.ages ol{grid-template-columns:1fr 1fr}.ages li{border-left:none;border-top:1px solid var(--line)}}
 
-/* statement */
-.statement{background:var(--rust);color:#FBF3EE;text-align:left}
-.statement .eyebrow{color:#FBF3EE;opacity:.9}
-.statement h2{font-size:clamp(34px,5vw,60px);max-width:980px}
-.statement p{font-size:20px;max-width:760px;opacity:.95}
+.chapter{padding:140px 0;border-bottom:1px solid var(--line);position:relative}
+.ch-head{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:56px}
+.ch-num{font-family:var(--mono);font-size:14px;color:var(--quiet);padding-top:18px}
+.ch-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(48px,7vw,96px);line-height:.98;letter-spacing:-.02em}
+.body{margin-left:144px;max-width:760px}
+.body p{font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:var(--muted);margin-bottom:22px}
+.body p.punch{font-family:var(--serif);font-size:clamp(34px,4.6vw,58px);line-height:1.05;color:var(--bone);margin:44px 0}
+.body strong{color:var(--bone);font-weight:600}
+@media(max-width:760px){.ch-head{grid-template-columns:1fr}.ch-num{padding-top:0}.body{margin-left:0}}
 
-/* how */
-.how{background:var(--sand)}
-.layers{margin-top:44px;border-radius:14px;overflow:hidden;border:1px solid #CFC8B8}
-.layer{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:30px 36px;background:var(--paper);border-top:1px solid #CFC8B8}
-.layer:first-child{background:var(--navy);color:var(--cream);border-top:none}
-.layer:first-child p{color:var(--muted-dark)}
-.layer h3{font-size:22px}
-.layer p{color:var(--muted)}
-@media(max-width:700px){.layer{grid-template-columns:1fr;gap:6px}}
+.truths{margin-left:144px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:56px}
+.truth{border:1px solid var(--line);border-radius:4px;padding:30px;background:var(--ground-2)}
+.truth .k{font-family:var(--mono);font-size:13px;color:var(--quiet)}
+.truth h3{font-family:var(--serif);font-weight:400;font-size:36px;margin:10px 0;line-height:1.05}
+.truth p{color:var(--muted);font-size:17px}
+@media(max-width:900px){.truths{grid-template-columns:1fr;margin-left:0}}
 
-/* who */
-.sectors{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.pill{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:600;font-size:16px}
+.pyramids{margin:64px 0 0 144px;max-width:860px}
+@media(max-width:760px){.pyramids{margin-left:0}}
 
-/* network */
-.network{background:var(--navy);color:var(--cream)}
-.network .eyebrow{color:var(--rust-soft)}
-.network .lede{color:var(--muted-dark)}
-.lead{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center;margin-top:52px;background:var(--navy-2);border-radius:18px;padding:44px}
-.lead img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px}
-.lead .role{color:var(--rust-soft);font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
-.lead h3{font-family:var(--serif);font-weight:400;font-size:38px;margin:8px 0 18px}
-.lead p{color:var(--muted-dark);margin-bottom:14px}
-.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:26px 0 28px}
-.creds div{border-top:2px solid var(--rust-soft);padding-top:12px}
-.creds b{display:block;font-size:22px;color:var(--cream)}
-.creds span{font-size:15px;color:var(--muted-dark)}
-.lead .links{display:flex;gap:12px;flex-wrap:wrap}
-.lead .btn-ghost{color:var(--cream);padding:11px 22px;font-size:15px}
-@media(max-width:900px){.lead{grid-template-columns:1fr;padding:28px;gap:28px}.lead img{max-width:320px}}
-.subhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-top:72px;flex-wrap:wrap}
-.subhead h3{font-family:var(--serif);font-weight:400;font-size:28px}
-.filters{display:flex;gap:8px}
-.filters button{font:inherit;font-size:14px;font-weight:600;background:transparent;color:var(--cream);border:1.5px solid rgba(246,244,239,.35);border-radius:999px;padding:8px 16px;cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--cream);color:var(--navy);border-color:var(--cream)}
-.people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-@media(max-width:960px){.people{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.people{grid-template-columns:1fr}}
-.person{background:var(--navy-2);border:1px solid rgba(246,244,239,.12);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:6px}
-.avatar{width:72px;height:72px;border-radius:50%;background:var(--sand);color:var(--navy);display:grid;place-items:center;font-family:var(--serif);font-size:24px;margin-bottom:12px;overflow:hidden}
-.avatar img{width:100%;height:100%;object-fit:cover}
-.person .tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rust-soft)}
-.person h4{font-size:20px;font-weight:700}
-.person p{font-size:16px;color:var(--muted-dark)}
-.person a{font-size:15px;font-weight:600;color:var(--rust-soft);margin-top:auto;padding-top:10px;text-decoration:none}
-.join{margin-top:28px;font-size:16px;color:var(--muted-dark)}
-.join a{color:var(--rust-soft);font-weight:600}
+.elements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.el{border:1px solid var(--line);border-radius:4px;background:var(--ground-2);padding:36px;display:flex;flex-direction:column;gap:18px}
+.el .top{display:flex;justify-content:space-between;align-items:flex-start}
+.el .sym{font-family:var(--serif);font-size:120px;line-height:.85}
+.el .sym sup{font-family:var(--mono);font-size:34px}
+.el h3{font-size:24px;font-weight:600}
+.el .def{color:var(--muted);font-size:17px}
+.el ul{list-style:none;border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:9px;font-size:16px;color:#D3D6DC}
+.el.x .sym sup,.el.x .k{color:var(--x)} .el.e .sym sup,.el.e .k{color:var(--e)} .el.n .sym sup,.el.n .k{color:var(--n)}
+.el .k{font-family:var(--mono);font-size:13px}
+@media(max-width:960px){.elements{grid-template-columns:1fr}}
+.compound{margin-top:40px;font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);color:var(--muted)}
 
-/* engage */
-.phase .when{font-size:13px;font-weight:700;color:var(--rust);letter-spacing:.1em;text-transform:uppercase}
-.phase h3{margin:8px 0 4px;font-size:24px}
+.swear{margin-left:144px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.swear div{background:var(--ground);padding:32px}
+.swear h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.05;margin-bottom:10px}
+.swear p{color:var(--muted);font-size:17px}
+@media(max-width:860px){.swear{grid-template-columns:1fr;margin-left:0}}
 
-/* contact */
-.contact{background:var(--navy);color:var(--cream);text-align:left}
-.contact .eyebrow{color:var(--rust-soft)}
-.contact h2{font-size:clamp(34px,5vw,58px);max-width:900px}
-.contact p{color:var(--muted-dark);font-size:20px;max-width:720px}
-.contact .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
-.contact .btn-ghost{color:var(--cream)}
- /* proof strip */
-.proof{background:var(--navy-2);color:var(--cream);padding:30px 0}
-.proof .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.proof b{display:block;font-family:var(--serif);font-weight:400;font-size:28px}
-.proof span{font-size:14px;color:var(--muted-dark)}
-@media(max-width:820px){.proof .wrap{grid-template-columns:repeat(2,1fr)}}
-/* compare */
-table.compare{width:100%;border-collapse:collapse;margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:16px}
-.compare th,.compare td{padding:16px 20px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
-.compare thead th{border-top:none;background:var(--sand);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
-.compare td:first-child{font-weight:600}
-.compare .us{background:#FBEFEA}
-.table-wrap{overflow-x:auto}
-/* sector cards */
-.sector h3{font-family:var(--serif);font-weight:400;font-size:24px}
-/* results */
-.quote{font-family:var(--serif);font-size:20px;line-height:1.5}
-.quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:15px;color:var(--muted);margin-top:14px}
-.card .metric{font-family:var(--serif);font-size:44px;color:var(--rust);line-height:1}
-/* faq */
-.faq{max-width:860px;margin-top:36px}
-.faq details{border-top:1px solid var(--line);padding:20px 0}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::after{content:"+";color:var(--rust);font-size:24px;line-height:1}
-.faq details[open] summary::after{content:"–"}
-.faq p{color:var(--muted);margin-top:10px}
-/* newsletter */
-.news{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;max-width:560px}
-.news input{flex:1;min-width:220px;font:inherit;font-size:16px;padding:14px 18px;border-radius:999px;border:1.5px solid rgba(246,244,239,.35);background:transparent;color:var(--cream)}
-.news input::placeholder{color:#9AA6BA}
-.contact-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:start}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:48px}}
-.contact h3{font-family:var(--serif);font-weight:400;font-size:26px}
-/* mobile sticky cta */
-.mcta{display:none}
-@media(max-width:820px){.mcta{display:block;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;text-align:center;box-shadow:0 8px 24px rgba(20,33,61,.3)}body{padding-bottom:84px}}
-footer{background:#0E182E;color:#9AA6BA;font-size:14px;padding:28px 0}
+.pro{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+.pro img{border-radius:4px}
+.pro h3{font-family:var(--serif);font-weight:400;font-size:52px;line-height:1;margin:8px 0 22px}
+.pro p{color:var(--muted);font-size:19px;margin-bottom:16px;max-width:620px}
+.creds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:28px 0 30px}
+.creds div{border-top:1px solid var(--line);padding-top:12px}
+.creds b{display:block;font-family:var(--serif);font-weight:400;font-size:28px}
+.creds span{font-size:14px;color:var(--quiet)}
+@media(max-width:900px){.pro{grid-template-columns:1fr}.pro img{max-width:280px}.creds{grid-template-columns:1fr 1fr}}
+
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-left:144px}
+.phase{border:1px solid var(--line);border-radius:4px;padding:30px;background:var(--ground-2)}
+.phase .k{font-family:var(--mono);font-size:13px;color:var(--quiet);letter-spacing:.12em;text-transform:uppercase}
+.phase h3{font-family:var(--serif);font-weight:400;font-size:40px;margin:8px 0}
+.phase p{color:var(--muted);font-size:17px}
+@media(max-width:900px){.phases{grid-template-columns:1fr;margin-left:0}}
+
+.close{padding:160px 0 140px;position:relative;overflow:hidden}
+.close .terrain{position:absolute;left:0;right:0;bottom:0;height:60%;opacity:.5;pointer-events:none;transform:scaleX(-1)}
+.close h2{font-family:var(--serif);font-weight:400;font-size:clamp(52px,8vw,112px);line-height:.95;letter-spacing:-.02em;position:relative}
+.close p{position:relative;margin-top:24px;font-size:22px;color:var(--muted);max-width:620px}
+.close .ctas{position:relative}
+
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--quiet)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:14px}
+.rail a{display:block;width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .2s,transform .2s}
+.rail a.on{background:var(--bone);transform:scale(1.4)}
+@media(max-width:980px){.rail{display:none}}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.mcta{display:none}
+@media(max-width:820px){.mcta{display:block;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;text-align:center}body{padding-bottom:80px}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a class="logo" href="#top">Elemental<span> Pro</span></a>
-    <ul>
-      <li><a href="#offer">Offer</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#network">Network</a></li>
-      <li><a href="#engage">Engagement</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-    <a class="btn btn-primary" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book a 30-min call</a>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="XEN1 by Elemental Pro, back to top">
+      <svg viewBox="0 0 600 600" aria-hidden="true"><g stroke="#E6E1D8"><line x1="250" x2="250" y1="130" y2="470" stroke-width="40"/><line x1="320" x2="320" y1="130" y2="470" stroke-width="20"/><line x1="380" x2="380" y1="130" y2="470" stroke-width="20"/></g></svg>
+      <b>XEN<sup>1</sup></b><span>by Elemental Pro</span>
+    </a>
+    <nav aria-label="Chapters">
+      <ul>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#flip">The flip</a></li>
+        <li><a href="#ops">Ops</a></li>
+        <li><a href="#n1">n=1</a></li>
+        <li><a href="#xen1">XEN1</a></li>
+        <li><a href="#pro">Pro</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min</a>
   </div>
 </header>
 
-<main id="top">
-
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Fractional COO and CMO network</p>
-    <h1>Strategy, marketing and execution. One engagement.</h1>
-    <p>Elemental Pro brings strategy leadership, marketing, content development and deployment, and AI-enabled operations into one package for mid-sized businesses.</p>
-    <div class="ctas">
-      <a class="btn btn-primary" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book a 30-min call</a>
-      <a class="btn btn-ghost" href="#network">Meet the network</a>
-    </div>
-  </div>
-</section>
-
-<div class="proof" aria-label="Credentials">
-  <div class="wrap">
-    <div><b>~20 years</b><span>Strategy leadership, NYC agencies</span></div>
-    <div><b>~15 years</b><span>Pharma and medical device launches</span></div>
-    <div><b>VP Marketing</b><span>Novartis</span></div>
-  </div>
+<div class="rail" aria-hidden="true">
+  <a href="#top" data-for="top" tabindex="-1"></a>
+  <a href="#manifesto" data-for="manifesto" tabindex="-1"></a>
+  <a href="#flip" data-for="flip" tabindex="-1"></a>
+  <a href="#ops" data-for="ops" tabindex="-1"></a>
+  <a href="#n1" data-for="n1" tabindex="-1"></a>
+  <a href="#xen1" data-for="xen1" tabindex="-1"></a>
+  <a href="#swear" data-for="swear" tabindex="-1"></a>
+  <a href="#pro" data-for="pro" tabindex="-1"></a>
+  <a href="#engage" data-for="engage" tabindex="-1"></a>
 </div>
 
-<section id="problem">
-  <div class="wrap">
-    <p class="eyebrow">The problem</p>
-    <h2>Mid-sized businesses buy the thinking and the doing from different people.</h2>
-    <div class="grid4">
-      <div class="card"><h3>Strategy firm</h3><p>Delivers a plan, then leaves.</p></div>
-      <div class="card"><h3>Agency</h3><p>Interprets the plan to fit its own services.</p></div>
-      <div class="card"><h3>Content vendors</h3><p>Produce volume without the strategy.</p></div>
-      <div class="card"><h3>Operations</h3><p>Owned by no one; the owner absorbs it.</p></div>
-    </div>
-    <p class="pullquote">Every handoff loses intent, time and money.</p>
-  </div>
-</section>
+<main>
 
-<section class="statement">
-  <div class="wrap">
-    <p class="eyebrow">A new era of combined ability</p>
-    <h2>AI closes the gap between deciding and doing.</h2>
-    <p>One senior lead, supported by AI agents, can now set the strategy and deliver the marketing, content and operations behind it.</p>
-  </div>
-</section>
-
-<section id="offer">
-  <div class="wrap">
-    <p class="eyebrow">The offer</p>
-    <h2>One package, four capabilities, each tied to an outcome.</h2>
-    <div class="grid4">
-      <div class="card cap"><p class="num">01</p><h3>Strategy leadership</h3><p>Brand, positioning, growth plan, priorities.</p><p><b>Outcome:</b> one plan everyone works from.</p></div>
-      <div class="card cap"><p class="num">02</p><h3>Marketing</h3><p>Channels, campaigns and client acquisition.</p><p><b>Outcome:</b> a measurable pipeline.</p></div>
-      <div class="card cap"><p class="num">03</p><h3>Content development and deployment</h3><p>Created, published and measured.</p><p><b>Outcome:</b> consistent presence without a content team.</p></div>
-      <div class="card cap"><p class="num">04</p><h3>AI-enabled operations</h3><p>Business process reengineering with agents.</p><p><b>Outcome:</b> hours returned to the owner and staff.</p></div>
-    </div>
-    <div class="table-wrap">
-    <table class="compare">
-      <thead><tr><th></th><th>Full-time executive</th><th>Agency</th><th class="us">Elemental Pro</th></tr></thead>
-      <tbody>
-        <tr><td>Senior strategy</td><td>Yes</td><td>Limited</td><td class="us">Yes</td></tr>
-        <tr><td>Execution included</td><td>Needs a team</td><td>Yes, within its services</td><td class="us">Yes, across all four</td></tr>
-        <tr><td>Operations and automation</td><td>Sometimes</td><td>No</td><td class="us">Yes</td></tr>
-        <tr><td>Commitment</td><td>Salary, equity, benefits</td><td>Retainer</td><td class="us">Monthly retainer</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-</section>
-
-<section id="how" class="how">
-  <div class="wrap">
-    <p class="eyebrow">How it works</p>
-    <h2>Senior judgment on top, agents underneath.</h2>
-    <div class="layers">
-      <div class="layer"><h3>Lead</h3><p>A fractional COO or CMO sets direction, owns the plan, reviews every output and is accountable for results.</p></div>
-      <div class="layer"><h3>AI agents</h3><p>Research, drafting, content production, scheduling, reporting and process automation.</p></div>
-      <div class="layer"><h3>Human review</h3><p>Regulated and client-facing work escalates to people before it ships.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="who">
-  <div class="wrap">
-    <p class="eyebrow">Who it is for</p>
-    <h2>Owner-led, mid-sized businesses.</h2>
-    <p class="lede">Large enough to need senior leadership. Too lean to staff a full marketing and operations team.</p>
-    <div class="grid3">
-      <div class="card sector"><h3>Real estate</h3><p>Brokerages, developers and property managers growing past what the owner can run alone.</p></div>
-      <div class="card sector"><h3>High-margin health services</h3><p>Concierge medicine, aesthetics and specialty clinics, where launch experience counts.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="network" class="network">
-  <div class="wrap">
-    <p class="eyebrow">The network</p>
-    <h2>Fractional COOs and CMOs, led by Pro Bose.</h2>
-    <p class="lede">Each engagement is led by one senior operator from the network, matched to the business and the problem.</p>
-
-    <article class="lead">
-      <img src="pro-bose.jpg" alt="Pro Bose" width="400" height="400">
-      <div>
-        <p class="role">Principal · Fractional CMO and COO</p>
-        <h3>Pro Bose</h3>
-        <p>Pro has spent roughly twenty years as a strategy lead at New York creative agencies, fifteen of them launching pharmaceutical products and medical devices, and served as VP of Marketing at Novartis.</p>
-        <p>He built Precision Equine Health, a technology-driven whole-horse health intelligence platform run on the same AI-enabled operating model Elemental Pro delivers to clients.</p>
-        <div class="creds">
-          <div><b>~20 years</b><span>Strategy lead, NYC agencies</span></div>
-          <div><b>~15 years</b><span>Pharma and medical device launches</span></div>
-          <div><b>VP Marketing</b><span>Novartis</span></div>
-          <div><b>Built PEH</b><span>Precision Equine Health</span></div>
-        </div>
-        <div class="links">
-          <a class="btn btn-primary" href="#contact">Work with Pro</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/probose/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+<section class="hero" id="top">
+  <div class="terrain"><img src="terrain.svg" alt=""></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mono">XEN1 · A manifesto for the age of intelligence</p>
+      <h1 style="margin-top:22px">Ice melts.<br>Bronze yields.<br><em>Agencies?</em></h1>
+      <p class="lede">Every age ends the same way: quietly, then all at once. This one's ending now.</p>
+      <div class="ctas">
+        <a class="cta" href="#manifesto">Read the manifesto</a>
+        <a class="cta ghost" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min</a>
       </div>
-    </article>
-
-    <p class="join">Senior operator interested in joining? <a href="#contact">Get in touch</a>.</p>
+    </div>
+    <img class="logo-anim" src="xen1-logo-animated.svg" alt="The XEN1 mark: three lines form X, E and N, then resolve into three vertical lines" width="420" height="420">
   </div>
 </section>
 
-<section id="engage">
+<div class="ages" aria-label="The ages">
+  <ol class="wrap">
+    <li><p class="age">Ice</p><p class="verb">rewarded those who could endure.</p></li>
+    <li><p class="age">Bronze</p><p class="verb">rewarded those who could forge.</p></li>
+    <li><p class="age">Industry</p><p class="verb">rewarded those who could scale.</p></li>
+    <li><p class="age">Information</p><p class="verb">rewarded those who could know.</p></li>
+    <li class="now"><p class="age">Intelligence</p><p class="verb">Human. Hybrid. Both.</p></li>
+  </ol>
+</div>
+
+<section class="chapter" id="manifesto">
   <div class="wrap">
-    <p class="eyebrow">Engagement</p>
-    <h2>Three phases, one lead throughout.</h2>
-    <div class="grid3">
-      <div class="card phase"><p class="when">Weeks 1–4</p><h3>Diagnostic</h3><p>Brand, funnel and operations audit; priorities and plan.</p></div>
-      <div class="card phase"><p class="when">Months 2–3</p><h3>Build</h3><p>Positioning, content engine and agent workflows go live.</p></div>
-      <div class="card phase"><p class="when">Ongoing</p><h3>Run</h3><p>Fractional CMO and COO leadership with monthly reporting.</p></div>
+    <div class="ch-head rv"><span class="ch-num">01 / Manifesto</span><h2>Hourware is dead.</h2></div>
+    <div class="body rv">
+      <p>And the agency? Still billing like it's 1987. A pyramid of hours. A few minds on top, a sprawl of juniors underneath, the client paying for the sprawl.</p>
+      <p class="punch">Done. The bottom of the pyramid just went liquid.</p>
+      <p>Three truths. No hedging.</p>
+    </div>
+    <div class="truths">
+      <div class="truth rv"><span class="k">i.</span><h3>The top wins.</h3><p>Judgment is the scarce thing now. Everything under it runs on intelligence. One senior mind, AI-amplified, does what a floor of people used to.</p></div>
+      <div class="truth rv"><span class="k">ii.</span><h3>Ops for everyone.</h3><p>What only the big guys could staff, every business can now run. Democratized. Yours.</p></div>
+      <div class="truth rv"><span class="k">iii.</span><h3>n=1.</h3><p>Content got cheap. Attention didn't. So stop talking to the average. The average doesn't buy.</p></div>
+    </div>
+    <div class="body rv"><p class="punch">This is the unagency.</p></div>
+  </div>
+</section>
+
+<section class="chapter" id="flip">
+  <div class="wrap">
+    <div class="ch-head rv"><span class="ch-num">02 / The flip</span><h2>Keep the peak.<br>Liquefy the base.</h2></div>
+    <div class="body rv">
+      <p>The old deal: you paid for layers. Managers managing managers. Juniors learning on your dime. Strategy diluted at every handoff until it arrived as a deck nobody executed.</p>
+      <p><strong>The new deal: the senior mind stays. The layers go. AI does the lifting.</strong> You buy judgment and outcomes. Not hours. Never hours again.</p>
+    </div>
+    <div class="pyramids rv">
+      <svg viewBox="0 0 860 380" role="img" aria-label="Before: a pyramid of senior, managers and junior hours. After: senior judgment on top of a base powered by intelligence.">
+        <g fill="none" stroke="#3A4150" stroke-width="1.5">
+          <polygon points="215,40 45,320 385,320"/>
+          <line x1="158" y1="134" x2="272" y2="134"/>
+          <line x1="101" y1="227" x2="329" y2="227"/>
+        </g>
+        <text x="215" y="110" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="15" fill="#8C93A3">Senior</text>
+        <text x="215" y="188" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="17" fill="#8C93A3">Managers</text>
+        <text x="215" y="282" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="17" fill="#8C93A3">Junior hours, billed</text>
+        <text x="215" y="360" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="2" fill="#8C93A3">THE AGENCY</text>
+        <path d="M410 190 H452" stroke="#8C93A3" stroke-width="1.5"/><path d="M444 183 L454 190 L444 197" fill="none" stroke="#8C93A3" stroke-width="1.5"/>
+        <polygon points="588,134 702,134 815,320 475,320" fill="#181B24" stroke="#8EA2AE" stroke-opacity=".5" stroke-width="1.5"/>
+        <polygon points="645,40 588,134 702,134" fill="#A39BD0" fill-opacity=".16" stroke="#A39BD0" stroke-width="2"/>
+        <text x="645" y="114" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6E1D8">Judgment</text>
+        <text x="645" y="232" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="30" fill="#E6E1D8">Intelligence</text>
+        <text x="645" y="258" text-anchor="middle" font-family="Inter Tight, Arial, sans-serif" font-size="15" fill="#8EA2AE">does the lifting</text>
+        <text x="645" y="360" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="2" fill="#A39BD0">XEN1</text>
+      </svg>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section class="chapter" id="ops">
   <div class="wrap">
-    <p class="eyebrow">FAQ</p>
-    <h2>Common questions.</h2>
-    <div class="faq">
-      <details><summary>What does fractional mean?</summary><p>A senior executive works with your business part-time, on a set schedule, for a monthly fee instead of a full-time salary.</p></details>
-      <details><summary>How are we matched with a lead?</summary><p>By the problem and the industry. The diagnostic call decides whether the work needs a COO, a CMO or both.</p></details>
-      <details><summary>What do the AI agents do, and who checks them?</summary><p>Agents handle research, drafting, content production, scheduling, reporting and process automation. The lead reviews every output, and regulated or client-facing work goes to a person before it ships.</p></details>
+    <div class="ch-head rv"><span class="ch-num">03 / Ops, unlocked</span><h2>Moat drained.</h2></div>
+    <div class="body rv">
+      <p>Operations used to be a moat. Only the big could afford the people to build it.</p>
+      <p>Process. Automation. Reporting. Service. Scheduling. Once a department. Now a system, built around how your business actually breathes. Custom. Not bolted on. Not borrowed.</p>
+      <p class="punch">Headcount stops being the advantage. Clarity is.</p>
+      <p>The leanest shop with the sharpest system outruns the bloated one. Every time.</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section class="chapter" id="n1">
   <div class="wrap">
-    <p class="eyebrow">Next step</p>
-    <div class="contact-grid">
-      <div>
-        <h2>A 30-minute call.</h2>
-        <p>Bring the three problems costing you the most. Leave with where each one sits: strategy, marketing, content or operations.</p>
-        <div class="ctas">
-          <a class="btn btn-primary" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book a 30-min call</a>
-          <a class="btn btn-ghost" href="mailto:hi@elementalpro.us?subject=Elemental%20Pro">Email</a>
-        </div>
+    <div class="ch-head rv"><span class="ch-num">04 / n=1</span><h2>Mass media.<br>Mass message.<br><em class="serif" style="color:var(--n)">Mass meh.</em></h2></div>
+    <div class="body rv">
+      <p>Marketing was built for the average because making more was expensive. That math broke.</p>
+      <p>Making is easy now. An ad, a newsletter, a video, a post, a print piece, a page: shaped for the one segment, the one person, it's meant to move. Not the crowd. The one.</p>
+      <p class="punch">Insight is the new budget.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="xen1">
+  <div class="wrap">
+    <div class="ch-head rv"><span class="ch-num">05 / XEN1</span><h2>Three elements.<br>One compound.</h2></div>
+    <div class="elements">
+      <article class="el x rv">
+        <div class="top"><span class="k">01 · STRATEGY</span>
+          <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><line x1="8" y1="8" x2="48" y2="48" stroke="#A39BD0" stroke-width="1.5"/><line x1="48" y1="8" x2="8" y2="48" stroke="#A39BD0" stroke-width="1.5"/><circle cx="28" cy="28" r="5" fill="#A39BD0"/></svg></div>
+        <p class="sym">X<sup>1</sup></p>
+        <h3>Strategy</h3>
+        <p class="def">The singular x-factor strategy. Yours. Nobody else's.</p>
+        <ul><li>Brand architecture</li><li>Competitive differentiation</li><li>Customer segmentation</li><li>Insights and analytics framework</li><li>Team modeling and training</li><li>Coaching and mentoring</li><li>The rest of the CMO chair</li></ul>
+      </article>
+      <article class="el e rv">
+        <div class="top"><span class="k">02 · EXECUTION</span>
+          <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><line x1="8" y1="14" x2="48" y2="14" stroke="#8EA2AE" stroke-width="1.5"/><line x1="8" y1="28" x2="48" y2="28" stroke="#8EA2AE" stroke-width="1.5"/><line x1="8" y1="42" x2="48" y2="42" stroke="#8EA2AE" stroke-width="1.5"/><line x1="8" y1="14" x2="8" y2="42" stroke="#8EA2AE" stroke-width="1.5"/></svg></div>
+        <p class="sym">E<sup>1</sup></p>
+        <h3>Execution</h3>
+        <p class="def">Integrated execution, customized for each business. Tailor, not rack.</p>
+        <ul><li>Business process reengineering</li><li>A custom operating system, built around how you run</li></ul>
+      </article>
+      <article class="el n rv">
+        <div class="top"><span class="k">03 · PERSONALIZATION</span>
+          <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="20" fill="none" stroke="#C7A15A" stroke-width="1.5"/><circle cx="42" cy="14" r="5" fill="#C7A15A"/></svg></div>
+        <p class="sym">N<sup>1</sup></p>
+        <h3>Personalization</h3>
+        <p class="def">Hypertargeted content. Every message aimed. Nothing sprayed.</p>
+        <ul><li>Ad creation and placement</li><li>Newsletters</li><li>Videos</li><li>Social posts</li><li>Print</li><li>Web</li></ul>
+      </article>
+    </div>
+    <p class="compound rv">Pull one out and it stops reacting.</p>
+  </div>
+</section>
+
+<section class="chapter" id="swear">
+  <div class="wrap">
+    <div class="ch-head rv"><span class="ch-num">06 / What we swear by</span><h2>Four oaths.</h2></div>
+    <div class="swear rv">
+      <div><h3>One strategy.</h3><p>Yours. Not a template with your logo on it.</p></div>
+      <div><h3>Humans judge. Machines lift.</h3><p>A senior mind sets the direction and signs off every output. AI does the heavy.</p></div>
+      <div><h3>Built to fit.</h3><p>Execution shaped around how you actually run. Tailor, not rack.</p></div>
+      <div><h3>Written for one.</h3><p>Every message aimed. Nothing sprayed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="pro">
+  <div class="wrap pro">
+    <img class="rv" src="pro-bose.jpg" alt="Pro Bose" width="340" height="340">
+    <div class="rv">
+      <p class="mono">07 / Built by</p>
+      <h3>Pro Bose</h3>
+      <p>Twenty years in the old model. Strategy lead at New York creative agencies, fifteen of those years launching pharmaceutical products and medical devices. VP of Marketing at Novartis.</p>
+      <p>Saw the pyramid from the top. Watched the base go liquid. Built Precision Equine Health on the new model.</p>
+      <div class="creds">
+        <div><b>~20 yrs</b><span>Strategy lead, NYC agencies</span></div>
+        <div><b>~15 yrs</b><span>Pharma and device launches</span></div>
+        <div><b>VP Marketing</b><span>Novartis</span></div>
+        <div><b>Built PEH</b><span>Precision Equine Health</span></div>
       </div>
+      <div class="ctas" style="margin-top:0">
+        <a class="cta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min with Pro</a>
+        <a class="cta ghost" href="https://www.linkedin.com/in/probose/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="engage">
+  <div class="wrap">
+    <div class="ch-head rv"><span class="ch-num">08 / Engage</span><h2>Diagnose. Build. Run.</h2></div>
+    <div class="phases">
+      <div class="phase rv"><span class="k">Weeks 1–4</span><h3>Diagnose</h3><p>Brand, funnel and operations, taken apart. One strategy, one plan.</p></div>
+      <div class="phase rv"><span class="k">Months 2–3</span><h3>Build</h3><p>Positioning locked. Operating system live. Content engine on.</p></div>
+      <div class="phase rv"><span class="k">Ongoing</span><h3>Run</h3><p>Fractional CMO and COO leadership. Monthly reporting. No hours.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="close" id="book">
+  <div class="terrain"><img src="terrain.svg" alt=""></div>
+  <div class="wrap">
+    <p class="mono" style="position:relative">Next</p>
+    <h2 style="margin-top:18px">The age turned.<br>Turn with it.</h2>
+    <p>Thirty minutes. Bring the three problems costing you most. Leave knowing where each one lives: X, E or N.</p>
+    <div class="ctas">
+      <a class="cta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min</a>
+      <a class="cta ghost" href="mailto:hi@elementalpro.us?subject=XEN1">hi@elementalpro.us</a>
     </div>
   </div>
 </section>
@@ -353,24 +369,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Elemental Pro LLC · New York · Florida</span>
-    <span>EP-WEB-v1.3</span>
+    <span>© <span id="yr">2026</span> Elemental Pro LLC · XEN1 · New York · Florida</span>
+    <span>EP-WEB-v2.0</span>
   </div>
 </footer>
 
-<a class="btn btn-primary mcta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book a 30-min call</a>
+<a class="cta mcta" href="https://calendly.com/probose/30min" target="_blank" rel="noopener">Book 30 min</a>
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-document.querySelectorAll('.filters button').forEach(function(b){
-  b.addEventListener('click', function(){
-    var f = b.getAttribute('data-filter');
-    document.querySelectorAll('.filters button').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-    document.querySelectorAll('#people .person').forEach(function(p){
-      p.style.display = (f === 'all' || p.getAttribute('data-role') === f) ? '' : 'none';
+(function(){
+  var rv = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) { rv.forEach(function(el){ el.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold: .12});
+  rv.forEach(function(el){ io.observe(el); });
+  var ids = ['top','manifesto','flip','ops','n1','xen1','swear','pro','engage'];
+  var spy = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var id = e.target.id;
+      document.querySelectorAll('.rail a').forEach(function(a){ a.classList.toggle('on', a.dataset.for === id); });
+      document.querySelectorAll('nav a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + id); });
     });
-  });
-});
+  }, {rootMargin: '-45% 0px -50% 0px'});
+  ids.forEach(function(id){ var el = document.getElementById(id); if (el) spy.observe(el); });
+})();
 </script>
 </body>
 </html>
