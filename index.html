@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Elemental Pro · XEN1 website · EP-WEB-v4.14 · 2026-10-28 · hero: Define your X factor. Execute without drag. Engage at N of 1. -->
+<!-- Elemental Pro · XEN1 website · EP-WEB-v4.15 · 2026-10-28 · hero logo: X factor / Execution / N of 1 engagement labels synced to X, E, N -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -66,11 +66,23 @@ nav a:hover,nav a.on{color:var(--bone)}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,88px);line-height:1;letter-spacing:-.02em}
 .hero h1 em{color:var(--muted)}
 .hero p.lede{font-size:clamp(19px,1.8vw,22px);color:var(--muted);max-width:560px}
-.hero .logo-anim{grid-area:logo;width:100%;max-width:170px;height:auto;aspect-ratio:1/1;margin:-8px 0 -12px -14px}
+.hero .logo-anim{grid-area:logo;position:relative;width:100%;max-width:200px;aspect-ratio:1/1;margin:-8px 0 -4px -14px}
+.logo-anim img,.logo-anim svg{display:block;width:100%;height:auto;aspect-ratio:1/1}
+.logo-key{position:absolute;left:0;right:0;top:88%;height:1.4em;margin:0;text-align:center;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.06em;color:var(--muted);white-space:nowrap;pointer-events:none}
+.logo-key span{position:absolute;left:0;right:0;opacity:0}
+.logo-key b{font-weight:600;color:var(--ember)}
+.logo-anim.go .k-x{animation:kx 10s linear infinite}
+.logo-anim.go .k-e{animation:ke 10s linear infinite}
+.logo-anim.go .k-n{animation:kn 10s linear infinite}
+@keyframes kx{0%,28%{opacity:0}30.5%,38%{opacity:1}40%,100%{opacity:0}}
+@keyframes ke{0%,43%{opacity:0}45.5%,52.5%{opacity:1}54.5%,100%{opacity:0}}
+@keyframes kn{0%,57.5%{opacity:0}60%,67.5%{opacity:1}69.5%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.logo-anim.go .logo-key span{animation:none}.logo-key span{opacity:1;position:static;display:block}.logo-key{top:100%;height:auto}}
 @media(min-width:860px){
   .hero-grid{grid-template-columns:1.2fr 1fr;column-gap:48px;grid-template-areas:"label ." "title logo" "lede ." "ctas .";row-gap:24px}
   .h-title,.hero .logo-anim{align-self:center}
   .hero .logo-anim{max-width:440px;justify-self:end;margin:0}
+  .logo-key{font-size:16px}
 }
 
 .ages{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ground-2)}
@@ -250,7 +262,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap hero-grid">
     <p class="mono h-label">XEN1 · For the age of intelligence</p>
     <h1 class="h-title">Ice melts.<br>Bronze yields.<br><em>Agencies?</em></h1>
-    <img class="logo-anim" src="xen1-logo-animated.svg" alt="The XEN1 mark: fragments assemble into a play symbol whose wall is a serif 1, break and recombine into X, E, N and 1, then return" width="420" height="420">
+    <div class="logo-anim" id="logo-anim"><img src="xen1-logo-animated.svg" alt="The XEN1 mark: fragments assemble into a play symbol whose wall is a serif 1, break and recombine into X, E, N and 1, then return" width="420" height="420"><p class="logo-key"><span class="k-x"><b>X</b> factor</span><span class="k-e"><b>E</b>xecution</span><span class="k-n"><b>N</b> of 1 engagement</span></p></div>
     <p class="lede h-lede">Every age ends the same way: quietly, then all at once.<br><b class="h-what">Define your X factor. Execute without drag. Engage at N of 1.</b></p>
     <div class="ctas h-ctas">
       <a class="cta" href="#hourware">Enter</a>
@@ -519,7 +531,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Elemental Pro LLC · XEN1 · New York · Florida</span>
-    <span>EP-WEB-v4.14</span>
+    <span>EP-WEB-v4.15</span>
   </div>
 </footer>
 
@@ -527,6 +539,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <script>
 document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false;});});
 document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){var w=document.getElementById('logo-anim');if(!w)return;var i=w.querySelector('img');function go(){w.classList.add('go');}
+fetch(i.getAttribute('src')).then(function(r){return r.text();}).then(function(t){var d=new DOMParser().parseFromString(t,'image/svg+xml').documentElement;if(d.nodeName!=='svg')throw 0;var v=document.importNode(d,true);v.removeAttribute('width');v.removeAttribute('height');w.replaceChild(v,i);requestAnimationFrame(function(){if(v.setCurrentTime)v.setCurrentTime(0);go();});}).catch(go);})();
 if (location.search.indexOf('sent=1') > -1) { var n = document.getElementById('sent-note'); if (n) n.hidden = false; }
 if (location.search.indexOf('guild=1') > -1) { var g = document.getElementById('guild-note'); if (g) g.hidden = false; }
 (function(){
