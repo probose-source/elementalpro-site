@@ -1,0 +1,229 @@
+<!doctype html>
+<!-- XEN1 Learn · financial literacy app · XEN1-LEARN-WEB-v1.0 · 2026-10-31 · first issue · served behind Cloudflare Access at xen1.us/learn -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>XEN1 Learn</title>
+<link rel="icon" href="../xen1-logo-static.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Sofia+Sans+Condensed:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#0E1015;--ground-2:#13161D;--line:#262B36;--bone:#E6E1D8;--muted:#C9CDD4;--quiet:#A3A9B5;--ember:#C2561F;--ok:#5FA37A;--bad:#D0674A;
+--serif:'Bodoni Moda','Bodoni 72',Didot,'Times New Roman',serif;--sans:'Sofia Sans Condensed','Arial Narrow',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--bone);font-family:var(--sans);font-size:19px;line-height:1.45;min-height:100vh}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(14,16,21,.97);z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px}
+.brand b{font-family:var(--serif);font-weight:400;font-size:26px}
+.brand span{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--quiet)}
+.who{font-size:15px;color:var(--quiet);text-align:right;line-height:1.2}
+.who a{color:var(--quiet)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:36px 0 12px}
+h2{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;margin-bottom:8px}
+.lede{color:var(--muted);max-width:600px}
+.label{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--quiet);font-weight:500}
+.levels{display:grid;gap:12px;margin:28px 0 48px}
+.lv{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:var(--ground-2);border:1px solid var(--line);color:inherit;font:inherit;padding:16px;border-radius:4px;cursor:pointer;min-height:72px}
+.lv:disabled{opacity:.45;cursor:not-allowed}
+.lv .n{font-family:var(--serif);font-size:30px;width:36px;text-align:center;color:var(--ember)}
+.lv .t{flex:1}
+.lv .t b{display:block;font-weight:600}
+.lv .t i{font-style:normal;color:var(--quiet);font-size:16px}
+.lv .s{font-size:16px;color:var(--quiet);white-space:nowrap}
+.lv .s.pass{color:var(--ok)}
+.video{position:relative;aspect-ratio:16/9;background:#07080B;border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:20px 0}
+.video video{width:100%;height:100%;display:block}
+.video .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:24px;gap:10px;background:radial-gradient(120% 80% at 70% 0%,rgba(194,86,31,.14),transparent 60%)}
+.video .ph p{color:var(--muted);font-size:17px}
+.card{background:var(--ground-2);border:1px solid var(--line);border-radius:4px;padding:20px;margin:16px 0}
+.q{font-size:21px;font-weight:600;margin:6px 0 16px}
+.opts{display:grid;gap:10px}
+.opt{width:100%;text-align:left;background:transparent;border:1px solid var(--line);color:var(--bone);font:inherit;padding:14px 16px;border-radius:4px;cursor:pointer;min-height:52px}
+.opt:hover:not(:disabled){border-color:var(--quiet)}
+.opt.right{border-color:var(--ok);background:rgba(95,163,122,.12)}
+.opt.wrong{border-color:var(--bad);background:rgba(208,103,74,.12)}
+.opt:disabled{cursor:default}
+.fb{margin-top:16px;padding:14px 16px;border-left:3px solid var(--ember);background:rgba(194,86,31,.08);display:none}
+.fb.show{display:block}
+.fb b{display:block;margin-bottom:4px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.cta{display:inline-block;background:var(--bone);color:var(--ground);text-decoration:none;font-weight:600;font-size:18px;padding:12px 22px;min-height:48px;border:0;cursor:pointer;font-family:var(--sans);border-radius:2px}
+.cta.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.prog{height:4px;background:var(--line);border-radius:2px;margin:8px 0 4px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--ember);transition:width .3s}
+.meta{font-size:15px;color:var(--quiet)}
+ul.rules{margin:10px 0 0 20px}ul.rules li{margin:6px 0;color:var(--muted)}
+.twin{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);font-weight:600}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:20px 0 40px;font-size:15px;color:var(--quiet)}
+@media(max-width:520px){.brand span{display:none}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="brand" href="./"><img src="../xen1-logo-static.svg" alt=""><b>XEN1</b><span>Learn</span></a>
+  <div class="who" id="who"></div>
+</div></header>
+<main class="wrap" id="app"></main>
+<footer><div class="wrap">XEN1 by Elemental Pro LLC · Education only; not tax, legal or investment advice. · XEN1-LEARN-WEB-v1.0</div></footer>
+<script>
+const LEVELS=[
+{id:1,file:"01-profit-vs-cash",title:"Profit vs. cash",sub:"Why profitable companies run out of money",
+ points:"Inventory is an asset until it sells. Credit sales are revenue now, cash later. Loans are cash, not income. Equipment is expensed over its life as depreciation.",
+ qs:[
+ {q:"Sales are growing fast. Why can the company still run out of cash?",o:["Customers haven't paid yet, while inventory and payroll get paid first","Revenue is taxed before it is earned","Growth always lowers gross margin","Banks freeze accounts of fast-growing firms"],a:0,rule:"Growth ties up cash: you pay for inventory and payroll before the bigger invoices are collected.",
+  t:{q:"Orders double next month. What happens to cash first?",o:["It falls, because supplies and labor are paid before customers pay","It doubles immediately","Nothing until year end","It rises, because revenue is booked"],a:0}},
+ {q:"You buy $10,000 of inventory with cash. What happens this month?",o:["Profit −$10,000, cash −$10,000","Profit unchanged, cash −$10,000","Profit unchanged, cash unchanged","Profit +$10,000, cash −$10,000"],a:1,rule:"Buying inventory turns cash into an asset on the shelf; it hits profit only when sold, as cost of goods.",
+  t:{q:"You buy $4,000 of supplies to resell, paying cash. Effect on profit today?",o:["−$4,000","None","+$4,000","−$2,000"],a:1}},
+ {q:"Next month you sell half of that $10,000 of inventory. How much hits profit as cost of goods sold (COGS)?",o:["$10,000","$0","$5,000","$2,500"],a:2,rule:"COGS matches only what was sold; the unsold half stays on the balance sheet as inventory.",
+  t:{q:"You hold $8,000 of inventory and sell a quarter of it. COGS?",o:["$8,000","$2,000","$6,000","$0"],a:1}},
+ {q:"You take a $20,000 bank loan. How is it recorded?",o:["Revenue, operating cash","Not revenue; financing cash","Revenue, financing cash","Not revenue; investing cash"],a:1,rule:"A loan is cash in from financing, not income; only the interest you pay is an expense.",
+  t:{q:"An owner puts $15,000 into the business. Is that revenue?",o:["Yes, operating","No, financing","Yes, investing","No, operating"],a:1}},
+ {q:"You buy a $6,000 computer with a three-year life. What expense hits profit each year?",o:["$6,000 in year one, interest","$2,000 a year, depreciation","$2,000 a year, cost of goods","None; it is an asset"],a:1,rule:"Equipment is spread over its useful life as depreciation; the cash left all at once when you bought it.",
+  t:{q:"A $12,000 van lasting four years. Annual depreciation?",o:["$12,000","$4,000","$3,000","$1,000"],a:2}}
+ ]},
+{id:2,file:"02-bridge",title:"The profit-to-cash bridge",sub:"Where the money went, in dollars",
+ points:"Operating cash flow = net income + depreciation − increase in receivables − increase in inventory + increase in payables.",
+ qs:[
+ {q:"Net income $10,000; depreciation $2,000; receivables up $5,000; payables up $1,000. Operating cash flow?",o:["$10,000","$8,000","$18,000","$4,000"],a:1,rule:"10,000 + 2,000 − 5,000 + 1,000 = 8,000. Add back non-cash depreciation, subtract cash tied up in receivables, add cash not yet paid out.",
+  t:{q:"Net income $6,000; depreciation $1,000; receivables up $3,000. Operating cash flow?",o:["$10,000","$2,000","$4,000","$6,000"],a:2}},
+ {q:"Net income $20,000; inventory up $8,000; payables down $3,000. Operating cash flow?",o:["$31,000","$15,000","$9,000","$25,000"],a:2,rule:"20,000 − 8,000 − 3,000 = 9,000. Building inventory and paying vendors down both use cash.",
+  t:{q:"Net income $12,000; inventory up $4,000; payables down $2,000. Operating cash flow?",o:["$6,000","$18,000","$10,000","$14,000"],a:0}},
+ {q:"Net income $15,000; depreciation $3,000; receivables down $4,000 (collected); inventory up $6,000. Operating cash flow?",o:["$8,000","$16,000","$22,000","$10,000"],a:1,rule:"15,000 + 3,000 + 4,000 − 6,000 = 16,000. Collecting receivables releases cash.",
+  t:{q:"Net income $9,000; receivables down $2,000; inventory up $5,000. Operating cash flow?",o:["$16,000","$2,000","$12,000","$6,000"],a:3}},
+ {q:"Net income $5,000; receivables up $12,000. Operating cash flow?",o:["$17,000","$5,000","−$7,000","$7,000"],a:2,rule:"5,000 − 12,000 = −7,000: profitable on paper, cash negative in the bank.",
+  t:{q:"Net income $3,000; receivables up $8,000. Operating cash flow?",o:["−$5,000","$11,000","$3,000","$5,000"],a:0}},
+ {q:"The owner takes a $10,000 distribution. Does it change operating cash flow?",o:["Yes, −$10,000","No; it is financing cash flow","Yes, it lowers net income","No; it is investing cash flow"],a:1,rule:"Distributions and loan principal are financing; they move cash but never operating cash flow or profit.",
+  t:{q:"You repay $5,000 of loan principal. Which bucket?",o:["Operating","Investing","Financing","It's an expense"],a:2}}
+ ]},
+{id:3,file:"03-balance-sheet",title:"Reading the balance sheet",sub:"Healthy on paper, short in the bank",
+ points:"Sample company: cash $1,700; receivables $19,000; inventory $5,000; net equipment $3,000; payables $2,000; debt due $4,000; taxes due $500; equity $22,200.",
+ qs:[
+ {q:"Assets $100,000; liabilities $40,000. Equity?",o:["$140,000","$60,000","$40,000","$100,000"],a:1,rule:"Assets = Liabilities + Equity, so equity = 100,000 − 40,000 = 60,000.",
+  t:{q:"Assets $250,000; liabilities $90,000. Equity?",o:["$160,000","$340,000","$90,000","$250,000"],a:0}},
+ {q:"In the sample company, what is the biggest red flag?",o:["$5,000 of inventory","$1,700 of cash against $6,500 due soon, with $19,000 uncollected","$3,000 of equipment","$22,200 of equity"],a:1,rule:"Look at cash against what's due first; here receivables hold the money the bills need.",
+  t:{q:"Cash $3,000; bills due in 60 days $14,000; receivables $30,000. Red flag?",o:["Receivables are too high to matter","Cash covers barely a fifth of what's due; collection timing is the risk","Nothing; assets exceed bills","Equity is negative"],a:1}},
+ {q:"Fastest fix for the sample company?",o:["Buy more inventory","Collect receivables","Take an owner distribution","Buy new equipment"],a:1,rule:"Collecting even a third of the $19,000 covers everything due.",
+  t:{q:"Cash is short but $40,000 sits in receivables over 45 days. First move?",o:["Call and collect the oldest invoices","Cut prices","Order inventory","Raise payroll"],a:0}},
+ {q:"Customers pay in 60 days on average. Which move shortens that?",o:["Invoice monthly instead of on delivery","Deposits up front and a small early-pay discount","Extend terms to 90 days","Stop sending reminders"],a:1,rule:"Invoice on delivery, take deposits, offer early-pay discounts, keep a card on file, tighten terms.",
+  t:{q:"Which shortens collection time?",o:["Card on file and invoicing the day work ships","Net-90 terms","Quarterly invoicing","Waiving late fees"],a:0}},
+ {q:"Sample company current ratio (cash + receivables + inventory ÷ all three liabilities)?",o:["0.26","1.0","About 4.0","About 8.0"],a:2,rule:"25,700 ÷ 6,500 ≈ 4.0 looks healthy, but cash alone covers only 0.26 of it; most is unpaid receivables.",
+  t:{q:"Current assets $30,000 (cash $3,000); current liabilities $10,000. Current ratio, and the catch?",o:["3.0; but cash covers only 0.3","0.3; strong","3.0; no catch","10.0; too much cash"],a:0}}
+ ]},
+{id:4,file:"04-thirteen-week",title:"The 13-week cash forecast",sub:"See week 9 from week 1",
+ points:"Receipts on the date customers pay. An owner-set cash floor. Actuals every Monday, misses explained, roll forward a week.",
+ qs:[
+ {q:"Enter a customer receipt on which date?",o:["Invoice date","Date they actually pay","End of the month","Date the order is placed"],a:1,rule:"The bank only sees cash that's paid; invoice-date forecasts look great and then bounce payroll.",
+  t:{q:"A $9,000 invoice goes out week 2; the client usually pays in 35 days. Which week does the cash go in?",o:["Week 2","About week 7","Week 13","Week 1"],a:1}},
+ {q:"What is the cash floor?",o:["The lowest balance ever recorded","An owner-set minimum; any week below it flags for action","The bank's overdraft limit","Average weekly payroll"],a:1,rule:"The floor is a decision, not a number in the books; a week below it means act now.",
+  t:{q:"Week 6 shows cash $12,000 against a $20,000 floor. What do you do?",o:["Wait for week 6","Act now: pull collections forward or move spending","Lower the floor","Ignore it; it's a forecast"],a:1}},
+ {q:"Receipts came in 15% under forecast last week. What next?",o:["Delete the forecast","Explain the variance, adjust timing assumptions, roll forward","Ignore misses under 20%","Restart from scratch"],a:1,rule:"Every miss over 10% gets a reason; the reason improves next week's assumptions.",
+  t:{q:"Vendor payments ran 12% over forecast. First step?",o:["Find which bills and why, then update assumptions","Stop paying vendors","Nothing","Raise prices"],a:0}},
+ {q:"A payroll shortfall shows in week 9. Which set of levers fits?",o:["Collect receivables, delay discretionary spend, draw the credit line, renegotiate vendor terms","Hire more staff","Buy equipment","Take a distribution"],a:0,rule:"Cash levers: collect faster, pay slower (within terms), cut or delay spend, borrow against a line.",
+  t:{q:"Which is a cash lever, not a profit lever?",o:["Asking a vendor for 45-day terms instead of 15","Raising prices next year","A new marketing campaign","Hiring a salesperson"],a:0}},
+ {q:"Why 13 weeks?",o:["It's a legal requirement","One quarter: accurate enough, far enough out to act","Banks require it","It matches the tax year"],a:1,rule:"Near enough to trust the numbers, far enough to fix a gap before it lands.",
+  t:{q:"Why not forecast cash weekly for 52 weeks?",o:["Accuracy falls off; weekly detail beyond a quarter is guesswork","It's illegal","Software can't do it","It's too short"],a:0}}
+ ]},
+{id:5,file:"05-disciplines",title:"The three disciplines",sub:"Anticipate instead of react",
+ points:"Know your numbers. Run a cost system. Get legal coverage before you negotiate.",
+ qs:[
+ {q:"Which are the three components of anticipation?",o:["Sales, marketing, hiring","Know your numbers; a cost system; legal coverage","Revenue, profit, cash","Budget, forecast, audit"],a:1,rule:"Read and measure the financials, manage every cost for return, and bring in an attorney before trouble.",
+  t:{q:"Which is NOT one of the three disciplines?",o:["Knowing your numbers","A cost system","Legal coverage","Maximizing social media reach"],a:3}},
+ {q:"An expense shows no measurable return. What do you do?",o:["Keep it; it's already budgeted","Test it, then cut or renegotiate","Double it","Move it to next year"],a:1,rule:"A wasted dollar is also a dollar not reinvested in growth, so its true cost is higher than it looks.",
+  t:{q:"A $900/month software tool nobody can tie to results. Next step?",o:["Measure its use for 30 days, then cut or renegotiate","Upgrade it","Ignore it","Prepay a year"],a:0}},
+ {q:"When do you negotiate terms?",o:["After the first invoice","Before signing","At renewal only","Never; take list price"],a:1,rule:"Leverage is highest before you commit.",
+  t:{q:"Best moment to ask a landlord for a rent concession?",o:["Before signing the lease","Six months in","When rent is late","At move-out"],a:0}},
+ {q:"When does a deal go to an attorney?",o:["After a dispute starts","Before negotiation starts","Only for deals over $1M","Never for small deals"],a:1,rule:"An attorney who sees the deal first spots the exposure before you've conceded it.",
+  t:{q:"You're about to sign a three-year vendor contract. When does counsel review it?",o:["Before you negotiate terms","After signing","Only if the vendor sues","Never"],a:0}},
+ {q:"Profit up, cash down three months running. Where do you look first?",o:["Tax rate","Growth in receivables and inventory","Office rent","Depreciation method"],a:1,rule:"The bridge points to working capital: money stuck in receivables and inventory.",
+  t:{q:"Net income rising, bank balance falling. Most likely cause?",o:["Receivables growing faster than collections","Depreciation","Lower prices","Fewer employees"],a:0}}
+ ]}
+];
+const KEY="xen1-learn-v1"; let S={};
+try{S=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){S={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const app=document.getElementById("app"); let USER="";
+fetch("/cdn-cgi/access/get-identity",{credentials:"include"}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.email){USER=j.email;document.getElementById("who").innerHTML=j.email+'<br><a href="/cdn-cgi/access/logout">Sign out</a>'}}).catch(()=>{});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function passed(id){return S[id]&&S[id].score>=4}
+function home(){
+  const done=LEVELS.filter(l=>passed(l.id)).length;
+  app.innerHTML=`<h1>Read your numbers like a CFO.</h1><p class="lede">Five short levels. Each is one clip and five questions; four right opens the next level. Miss one and you get the rule, then a twin question with new numbers.</p>
+  <div class="prog" aria-hidden="true"><i style="width:${done*20}%"></i></div><p class="meta">${done} of 5 levels passed</p>
+  <div class="video" id="welcome"></div>
+  <div class="levels">${LEVELS.map((l,i)=>{const open=i===0||passed(LEVELS[i-1].id);const s=S[l.id];
+   return `<button class="lv" ${open?"":"disabled"} data-l="${i}"><span class="n">${l.id}</span><span class="t"><b>${esc(l.title)}</b><i>${esc(l.sub)}</i></span><span class="s ${s&&s.score>=4?"pass":""}">${s?s.score+"/5":open?"Start":"Locked"}</span></button>`}).join("")}</div>
+  ${done===5?`<div class="row"><button class="cta" id="rep">See your report</button></div>`:""}`;
+  vid(document.getElementById("welcome"),"00-welcome","Welcome","Profit is an opinion; cash is a fact. In about thirty minutes you'll read your own numbers the way a CFO does.");
+  app.querySelectorAll(".lv").forEach(b=>b.onclick=()=>level(+b.dataset.l));
+  const r=document.getElementById("rep"); if(r) r.onclick=report;
+  scrollTo(0,0);
+}
+function vid(el,file,title,text){
+  el.innerHTML=`<div class="ph"><span class="label">${esc(title)}</span><p>${esc(text)}</p><p class="meta">Video coming soon.</p></div>`;
+  const v=document.createElement("video"); v.controls=true; v.playsInline=true; v.preload="metadata";
+  v.src=`video/${file}.mp4`; const tr=document.createElement("track"); tr.kind="captions"; tr.srclang="en"; tr.label="English"; tr.src=`video/${file}.vtt`; tr.default=true; v.appendChild(tr);
+  v.addEventListener("loadedmetadata",()=>{el.innerHTML="";el.appendChild(v)},{once:true}); v.load();
+}
+function level(i){
+  const L=LEVELS[i]; let k=0, score=0, misses=[];
+  app.innerHTML=`<p class="label" style="margin-top:28px">Level ${L.id} of 5</p><h2>${esc(L.title)}</h2><p class="lede">${esc(L.points)}</p><div class="video" id="v"></div><div id="q"></div>`;
+  vid(document.getElementById("v"),L.file,L.title,L.points);
+  function ask(item,isTwin){
+    const box=document.getElementById("q");
+    box.innerHTML=`<div class="card">${isTwin?'<p class="twin">Try the twin</p>':`<p class="meta">Question ${k+1} of 5 · score ${score}</p>`}<p class="q">${esc(item.q)}</p><div class="opts">${item.o.map((o,j)=>`<button class="opt" data-j="${j}">${esc(o)}</button>`).join("")}</div><div class="fb" id="fb"></div><div class="row" id="nx"></div></div>`;
+    box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+      const j=+b.dataset.j, ok=j===item.a;
+      box.querySelectorAll(".opt").forEach(x=>{x.disabled=true; if(+x.dataset.j===item.a) x.classList.add("right")});
+      if(!ok) b.classList.add("wrong");
+      const fb=document.getElementById("fb"), nx=document.getElementById("nx"), Q=L.qs[k];
+      if(isTwin){
+        fb.innerHTML=ok?"<b>Fixed.</b>That rule is yours now.":`<b>Not yet.</b>${esc(Q.rule)}`;
+        fb.classList.add("show"); nx.innerHTML=`<button class="cta">Next</button>`; nx.firstChild.onclick=next; return;
+      }
+      if(ok){score++; fb.innerHTML=`<b>Right.</b>${esc(Q.rule)}`; fb.classList.add("show"); nx.innerHTML=`<button class="cta">Next</button>`; nx.firstChild.onclick=next;}
+      else{misses.push(Q.rule); fb.innerHTML=`<b>Not quite.</b>${esc(Q.rule)}`; fb.classList.add("show"); nx.innerHTML=`<button class="cta">Try a twin question</button>`; nx.firstChild.onclick=()=>ask(Q.t,true);}
+    });
+    box.scrollIntoView({behavior:"smooth",block:"start"});
+  }
+  function next(){k++; if(k<5) ask(L.qs[k],false); else finish();}
+  function finish(){
+    const prev=S[L.id]; if(!prev||score>=prev.score) S[L.id]={score,misses,at:new Date().toISOString()}; save();
+    const pass=score>=4, last=i===LEVELS.length-1;
+    document.getElementById("q").innerHTML=`<div class="card"><p class="label">Level ${L.id} result</p><h2>${score} of 5</h2><p class="lede">${pass?(last?"All five levels passed.":"Level "+(L.id+1)+" is open."):"Four right opens the next level. Review the rules and run it again."}</p>${misses.length?`<ul class="rules">${misses.map(m=>`<li>${esc(m)}</li>`).join("")}</ul>`:""}<div class="row">${pass&&!last?`<button class="cta" id="go">Next level</button>`:""}${pass&&last?`<button class="cta" id="rp">See your report</button>`:""}<button class="cta ghost" id="again">${pass?"Retake":"Try again"}</button><button class="cta ghost" id="hm">All levels</button></div></div>`;
+    const g=document.getElementById("go"); if(g) g.onclick=()=>level(i+1);
+    const rp=document.getElementById("rp"); if(rp) rp.onclick=report;
+    document.getElementById("again").onclick=()=>level(i); document.getElementById("hm").onclick=home;
+  }
+  ask(L.qs[0],false); scrollTo(0,0);
+}
+function report(){
+  const total=LEVELS.reduce((s,l)=>s+(S[l.id]?S[l.id].score:0),0);
+  const miss=LEVELS.flatMap(l=>(S[l.id]&&S[l.id].misses)||[]);
+  const weakest=LEVELS.slice().sort((a,b)=>((S[a.id]||{}).score||0)-((S[b.id]||{}).score||0))[0];
+  const action={1:"List every inventory or equipment purchase from last month and mark which ones hit profit.",2:"Write last month's bridge: net income, depreciation, change in receivables, inventory and payables.",3:"Compare your cash today to everything due in the next 60 days.",4:"Set your cash floor and enter next week's expected receipts by pay date.",5:"Pick one recurring expense and test its return this month."}[weakest.id];
+  app.innerHTML=`<p class="label" style="margin-top:28px">Your report</p><h1>${total} of 25</h1>
+  <div class="card">${LEVELS.map(l=>`<p>${l.id}. ${esc(l.title)}: <b>${S[l.id]?S[l.id].score:0}/5</b></p>`).join("")}</div>
+  ${miss.length?`<div class="card"><p class="label">Rules to keep</p><ul class="rules">${miss.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div>`:""}
+  <div class="card"><p class="label">This week</p><p style="margin-top:8px">${esc(action)}</p></div>
+  <div class="row"><button class="cta" id="send">Send results to XEN1</button><button class="cta ghost" id="hm">All levels</button><span class="meta" id="sent"></span></div>`;
+  document.getElementById("hm").onclick=home;
+  document.getElementById("send").onclick=async e=>{
+    e.target.disabled=true; const out=document.getElementById("sent"); out.textContent="Sending…";
+    try{const r=await fetch("https://formsubmit.co/ajax/hello@xen1.us",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({_subject:"XEN1 Learn results"+(USER?" — "+USER:""),learner:USER||"(not signed in)",total:total+"/25",
+      levels:LEVELS.map(l=>l.title+": "+(S[l.id]?S[l.id].score:0)+"/5").join(" | "),misses:miss.join(" | ")||"none",action})});
+      out.textContent=r.ok?"Sent. XEN1 will follow up.":"Couldn't send; try again."; if(!r.ok) e.target.disabled=false;}
+    catch(_){out.textContent="Couldn't send; try again."; e.target.disabled=false}
+  };
+  scrollTo(0,0);
+}
+home();
+</script>
+</body>
+</html>
